@@ -16,10 +16,14 @@
                 <nav>
                   <ul id="navigation">
                     <li><%= link_to t("layouts.header.home"), root_path %></li>
-                    <li><%= link_to t("layouts.header.service"), "#" %> <i class="ti-angle-down"></i>
+                    <li><%= link_to t("layouts.header.service"), services_path %> <i class="ti-angle-down"></i>
                       <ul class="submenu">
-                        <li><a href="elements.html"></a></li>
-                        <li><a href="single_listings.html"></a></li>
+                        <%= render "shared/services" %>
+                      </ul>
+                    </li>
+                    <li><%= link_to t("layouts.header.vendor"), vendors_path %> <i class="ti-angle-down"></i>
+                      <ul class="submenu">
+                        <%= render "shared/vendors" %>
                       </ul>
                     </li>
                     <li><%= link_to t("layouts.header.news"), "#" %></li>

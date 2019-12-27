@@ -6,12 +6,19 @@ class Ability
   def initialize(user)
 
     user ||= User.new # guest user (not logged in)
+    can :read, Vendor
+    can :read, Service
+    can :read, ServiceOfVendor
     if user.admin?
       can :access, :rails_admin
-      #can :dashboard
       can :manage, :all
     elsif user.member?
       can :read, :all
+    end
+
+    if user.supplier?
+      can :manage, Vendor
+      can :manage, ServiceOfVendor
     end
     # Define abilities for the passed in user here. For example:
     #

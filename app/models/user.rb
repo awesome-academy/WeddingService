@@ -5,6 +5,7 @@ class User < ApplicationRecord
   validates :name, presence: true, length: {maximum: 50}
   enum role: AUTHORITIES
   validate :check_birthday
+  has_many :vendors
 
   def self.new_with_session params, session
     super.tap do |user|

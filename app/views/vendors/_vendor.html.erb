@@ -1,0 +1,21 @@
+<div class="col-xl-6 col-lg-6 col-md-6">
+  <div class="single_explorer">
+    <div class="thumb">
+      <%= image_tag src="explorer/1.png" %>
+    </div>
+    <div class="explorer_bottom d-flex">
+      <div class="icon">
+        <i class="flaticon-beach"></i>
+      </div>
+      <div class="explorer_info">
+        <h3><%= link_to vendor.name, vendor %></h3>
+        <p><%= vendor.place %></p>
+        <ul>
+          <li> <i class="fa fa-phone"></i>
+          <%= vendor.phone %></li>
+          <li><i class="fa fa-envelope"></i> <%= vendor.email %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
