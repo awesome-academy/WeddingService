@@ -19,7 +19,9 @@ gem "omniauth"
 gem "omniauth-google-oauth2"
 gem "omniauth-facebook"
 gem "figaro"
-
+gem "cancancan"
+gem "rails_admin"
+gem "pagy"
 group :development, :test do
   gem "sqlite3"
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
