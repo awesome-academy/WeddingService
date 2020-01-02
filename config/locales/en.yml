@@ -68,3 +68,10 @@ en:
       session:
         log_in: "Log in"
         remember: "remember_me"
+    
+    services:
+      index:
+        all: "All services"
+  admin:
+    check_admin: "You are not authorize to access this page!"
+        

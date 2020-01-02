@@ -1,7 +1,9 @@
 class User < ApplicationRecord
-  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable,:omniauthable, omniauth_providers: [:facebook, :google_oauth2]
-  devise :omniauthable, :omniauth_providers => [:google_oauth2]
+  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
+  devise :omniauthable
+  AUTHORITIES = {admin: "admin", supplier: "supplier", member: "member"}.freeze
   validates :name, presence: true, length: {maximum: 50}
+  enum role: AUTHORITIES
   validate :check_birthday
 
   def self.new_with_session params, session
