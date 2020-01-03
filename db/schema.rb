@@ -10,7 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_27_023827) do
+ActiveRecord::Schema.define(version: 2020_01_02_090716) do
+
+  create_table "ckeditor_assets", force: :cascade do |t|
+    t.string "data_file_name", null: false
+    t.string "data_content_type"
+    t.integer "data_file_size"
+    t.string "type", limit: 30
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["type"], name: "index_ckeditor_assets_on_type"
+  end
+
+  create_table "news", force: :cascade do |t|
+    t.string "title"
+    t.string "description"
+    t.text "content"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "service_of_vendors", force: :cascade do |t|
+    t.string "describle"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "vendor_id"
+    t.integer "service_id"
+    t.index ["service_id"], name: "index_service_of_vendors_on_service_id"
+    t.index ["vendor_id"], name: "index_service_of_vendors_on_vendor_id"
+  end
 
   create_table "services", force: :cascade do |t|
     t.string "name"
@@ -33,7 +62,8 @@ ActiveRecord::Schema.define(version: 2019_12_27_023827) do
     t.integer "sex"
     t.datetime "birthday"
     t.string "role", default: "member"
-
+    t.string "provider"
+    t.string "uid"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

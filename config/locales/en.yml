@@ -72,6 +72,12 @@ en:
     services:
       index:
         all: "All services"
+      submit: "Submit"
+      edit: "Edit"
+      create: "Create new service"
+      name: "name"
+      describle: "describle"
+      fail: "Fail"
   admin:
     check_admin: "You are not authorize to access this page!"
         

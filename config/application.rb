@@ -16,5 +16,6 @@ module OurWedding
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
     config.i18n.default_locale = :en
+    config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
   end
 end

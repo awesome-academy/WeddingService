@@ -22,6 +22,11 @@ gem "figaro"
 gem "cancancan"
 gem "rails_admin"
 gem "pagy"
+gem "mini_magick"
+gem "carrierwave"
+gem "ckeditor", "4.2.0"
+gem "bootstrap-sass"
+
 group :development, :test do
   gem "sqlite3"
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
