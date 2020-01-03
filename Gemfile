@@ -22,6 +22,9 @@ gem "figaro"
 gem "cancancan"
 gem "rails_admin"
 gem "pagy"
+gem "activestorage-dropbox"
+gem "carrierwave"
+
 group :development, :test do
   gem "sqlite3"
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   
   get "/about", to: "static_pages#about"
   resources :users
-  resources :news, only: %i(index show)
   resources :services, only: %i(index show)
+  resources :posts, only: %i(index show)
 end

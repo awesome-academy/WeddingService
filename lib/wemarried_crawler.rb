@@ -17,7 +17,7 @@ def get_news url
   doc.search('.list_item .item.clearfix').each do |item|
     title = ""
     description = ""
-    img_link = HOST + item.search('.image a img.lazy').attribute('src')
+    img_link = HOST + item.search('.image a img.lazy').attribute('data-src')
     title = item.search('.info .title a').first.content.strip
     detail_link = HOST + item.search('.info .title a').attribute('href')
     description = item.search('.info .description').first.content.strip
@@ -29,7 +29,7 @@ def get_news url
       date_text = c_item.search(".time_share.clearfix .time.pull-left span").first.content
       updated_at = DateTime.strptime(date_text, '%d/%m/%Y')
     end
-    news.append({ title: title, description: description, content:content, image: img_link, updated_at: updated_at })
+    news.append({ title: title, description: description, content:content, img_link: img_link, image: nil , updated_at: updated_at })
   end
   news
 end
