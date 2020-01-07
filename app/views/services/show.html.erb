@@ -1,0 +1,32 @@
+<div class="bradcam_area bradcam_bg_2">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12">
+        <div class="bradcam_text text-center">
+          <h3><%= @service.name %> </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="blog_area single-post-area section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 posts-list">
+        <div class="single-post">
+          <div class="feature-img">
+            <%= image_tag  src="blog/single_blog_1.png", class:"img-fluid" %>
+          </div>
+          <div class="blog_details">
+            <h2><%= @service.name %></h2>
+            <ul class="blog-info-link mt-3 mb-4">
+            </ul>
+            <p class="excert">
+              <%= @service.describle.html_safe %>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

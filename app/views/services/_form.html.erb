@@ -1,0 +1,11 @@
+<%= form_for service, url: f_url do |f| %>
+  <div class="row">
+    <%= f.label t("views.services.name") %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div class="row">
+    <%= f.label t("views.services.name") %><br>
+    <%= f.cktext_area :describle, class: "form-control", ckeditor: {toolbar: 'Full'}%><br>
+    <%= f.submit t("views.services.submit"), class: "btn btn-primary" %><br>
+  </div>
+<% end %>
