@@ -23,7 +23,7 @@
                       </ul>
                     </li>
                     <li><%= link_to t("layouts.header.news"), "#" %></li>
-                    <li><%= link_to t("layouts.header.plan"), "#" %></li>
+                    <li><%= link_to t("layouts.header.plan"), schedules_path %></li>
                     <li><%= link_to t("layouts.header.about"), about_path %></li>
                     <% if user_signed_in? %>
                       <li><%= link_to current_user.name, edit_user_registration_path %>

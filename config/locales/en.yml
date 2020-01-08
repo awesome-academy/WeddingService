@@ -78,6 +78,12 @@ en:
       name: "name"
       describle: "describle"
       fail: "Fail"
+    
+    tasks:
+      delete: "Delete"
+      sure: "You sure?"
+      success: "Success"
+      fail: "Fail"
   admin:
     check_admin: "You are not authorize to access this page!"
         

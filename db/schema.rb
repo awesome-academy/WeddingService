@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_02_090716) do
+ActiveRecord::Schema.define(version: 2020_01_07_064810) do
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string "data_file_name", null: false
@@ -31,6 +31,13 @@ ActiveRecord::Schema.define(version: 2020_01_02_090716) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "schedules", force: :cascade do |t|
+    t.string "title"
+    t.text "describle"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "service_of_vendors", force: :cascade do |t|
     t.string "describle"
     t.datetime "created_at", null: false
@@ -46,6 +53,16 @@ ActiveRecord::Schema.define(version: 2020_01_02_090716) do
     t.text "describle"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.string "title"
+    t.text "describle"
+    t.datetime "time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "schedule_id"
+    t.index ["schedule_id"], name: "index_tasks_on_schedule_id"
   end
 
   create_table "users", force: :cascade do |t|
