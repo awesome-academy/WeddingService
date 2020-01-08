@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :news, only: %i(index show)
   resources :services
   resources :schedules, only: %i(index show)
-  resources :tasks, only: %i(index destroy)
+  resources :tasks, only: %i(edit update destroy)
   resources :vendors
   resources :service_of_vendors
 end

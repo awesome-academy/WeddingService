@@ -85,6 +85,8 @@ en:
       sure: "You sure?"
       success: "Success"
       fail: "Fail"
+      vendors: "Show all vendors"
+      chooses: "Chooses"
     vendors:
       name: "name"
       email: "email"
