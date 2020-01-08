@@ -20,7 +20,12 @@
               <%= @schedule.describle.html_safe %>
             </p>
             <%= render @tasks %>
-            <%= link_to  t("views.tasks.chooses"), schedule_clones_path(@schedule), method: :post, class:"btn btn-success" %>
+            <% if user_signed_in? && !my_schedule? %>
+              <%= link_to  t("views.tasks.chooses"), schedule_clones_path(@schedule), method: :post, class:"btn btn-success" %>
+            <% end %>
+            <% if (can? :update, Schedule) && user_signed_in? && my_schedule? %>
+              <%= render "privacy_form", schedule: @schedule  %>
+            <% end %>
           </div>
         </div>
       </div>
