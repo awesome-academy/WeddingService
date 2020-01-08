@@ -1,0 +1,22 @@
+<div class="col-xl-6 col-lg-6 col-md-6">
+  <div class="single_explorer">
+    <div class="thumb">
+      <%= image_tag src="explorer/1.png" %>
+    </div>
+    <div class="explorer_bottom d-flex">
+      <div class="icon">
+        <i class="flaticon-beach"></i>
+      </div>
+      <div class="explorer_info">
+        <h3><%= link_to service_of_vendor.vendor.name, service_of_vendor %></h3>
+        <p><%= service_of_vendor.describle %></p>
+        <p><%= service_of_vendor.vendor.place %></p>
+        <ul>
+          <li> <i class="fa fa-phone"></i>
+          <%= service_of_vendor.vendor.phone %></li>
+          <li><i class="fa fa-envelope"></i> <%= service_of_vendor.vendor.email %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

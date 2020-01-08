@@ -1,0 +1,22 @@
+<div class="bradcam_area bradcam_bg_2">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12">
+        <div class="bradcam_text text-center">
+          <h3><%= t "views.vendors.edit" %></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="contact-section section_padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3"></div>
+      <div class="col-lg-6">
+        <%= render "form", vendor: @vendor, f_path: vendor_path %>
+      </div>
+    </div>
+  </div>
+</section>

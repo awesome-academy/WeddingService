@@ -1,0 +1,15 @@
+<%= form_for vendor, url: f_path do |f| %>
+  <div class="row">
+      <%= f.label t("views.vendors.name") %><br>
+      <%= f.text_field :name, class: "form-control" %><br>
+      <%= f.label t("views.vendors.email") %><br>
+      <%= f.email_field :email, class: "form-control" %><br>
+      <%= f.label t("views.vendors.phone") %><br>
+      <%= f.text_field :phone, class: "form-control" %><br>
+      <%= f.label t("views.vendors.place") %><br>
+      <%= f.text_field :place, class: "form-control" %><br>
+  </div>
+  <div class="row">
+    <%= f.submit t("views.vendors.submit"), class: "btn btn-primary" %><br>
+  </div>
+<% end %>

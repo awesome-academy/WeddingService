@@ -1,0 +1,28 @@
+<% provide :title, t("static_pages.about.about_us") %>
+<!-- bradcam_area  -->
+<div class="bradcam_area bradcam_bg_2">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12">
+        <div class="bradcam_text text-center">
+          <h3><%= t "views.vendors.all" %></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/ bradcam_area  -->
+<div class="explorer_europe list_wrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-4 col-lg-4"></div>
+      <div class="col-xl-8 col-lg-8">
+        <h3 class="exp_title"><%= @vendors.count %><%= t "views.vendors.avaiable" %></h3>
+        <div class="row">
+          <%= render @vendors %>
+          <%== pagy_bootstrap_nav(@pagy) %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

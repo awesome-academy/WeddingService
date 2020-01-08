@@ -38,6 +38,7 @@ en:
       service: "Service"
       plan: "Plan"
       sign_up: "Sign up"
+      vendor: "Vendor"
   static_pages:
     about:
       about_us: "About us"
@@ -84,6 +85,23 @@ en:
       sure: "You sure?"
       success: "Success"
       fail: "Fail"
+    vendors:
+      name: "name"
+      email: "email"
+      phone: "phone"
+      place: "place"
+      submit: "Submit"
+      edit: "Edit vendor"
+      create: "Create vendor"
+      description: "Description"
+      loca: "Location"
+      contact: "Contact now"
+      all: "All vendors"
+      avaiable: " vendors are available"
+      edit: "Edit"
+      delete: "Delete"
+      sure: "You sure?"
+      success: "Success"
+      fail: "Fail"
   admin:
     check_admin: "You are not authorize to access this page!"
-        
