@@ -8,4 +8,8 @@ module ApplicationHelper
   def get_vendors
     @vendors = Vendor.all
   end
+
+  def get_schedules
+    @schedules = Schedule.all
+  end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_07_064810) do
+ActiveRecord::Schema.define(version: 2020_02_03_010414) do
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string "data_file_name", null: false
@@ -62,7 +62,11 @@ ActiveRecord::Schema.define(version: 2020_01_07_064810) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "schedule_id"
+    t.integer "service_id"
+    t.integer "service_of_vendor_id"
     t.index ["schedule_id"], name: "index_tasks_on_schedule_id"
+    t.index ["service_id"], name: "index_tasks_on_service_id"
+    t.index ["service_of_vendor_id"], name: "index_tasks_on_service_of_vendor_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -81,8 +85,10 @@ ActiveRecord::Schema.define(version: 2020_01_07_064810) do
     t.string "role", default: "member"
     t.string "provider"
     t.string "uid"
+    t.integer "schedule_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["schedule_id"], name: "index_users_on_schedule_id"
   end
 
   create_table "vendors", force: :cascade do |t|

@@ -19,8 +19,13 @@
             <p class="excert">
               <%= @schedule.describle.html_safe %>
             </p>
-              <%= render @tasks %>
+            <%= render @tasks %>
+            <p><button class="btn btn-success"> <%= t "views.tasks.chooses" %> </button></p>
           </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div id="show-vendor">
         </div>
       </div>
     </div>

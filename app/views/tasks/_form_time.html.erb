@@ -1,0 +1,6 @@
+<%= form_for task, url: task_path(task) do |f| %>
+  <div class="row">
+    <%= f.date_field :time, class: "form-control" %>
+    <%= f.submit t("views.vendors.submit"), class: "btn btn-primary" %><br>
+  </div>
+<% end %>

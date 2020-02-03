@@ -9,6 +9,8 @@ class Ability
     can :read, Vendor
     can :read, Service
     can :read, ServiceOfVendor
+    can :read, Schedule
+    can :read, Task
     if user.admin?
       can :access, :rails_admin
       can :manage, :all
