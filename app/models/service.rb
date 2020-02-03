@@ -3,5 +3,8 @@ class Service < ApplicationRecord
   validates :describle, presence: true, length: {maximum: 200}
   has_many :tasks
   has_many :serviceOfVendors, class_name: "ServiceOfVendor", foreign_key: "service_id"
+  amoeba do
+    enable
+  end
 
 end

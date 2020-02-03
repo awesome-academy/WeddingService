@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_03_010414) do
+ActiveRecord::Schema.define(version: 2020_02_06_042332) do
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string "data_file_name", null: false
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2020_02_03_010414) do
     t.text "describle"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "privacy", default: "professed"
   end
 
   create_table "service_of_vendors", force: :cascade do |t|

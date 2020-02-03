@@ -20,7 +20,7 @@
               <%= @schedule.describle.html_safe %>
             </p>
             <%= render @tasks %>
-            <p><button class="btn btn-success"> <%= t "views.tasks.chooses" %> </button></p>
+            <%= link_to  t("views.tasks.chooses"), schedule_clones_path(@schedule), method: :post, class:"btn btn-success" %>
           </div>
         </div>
       </div>

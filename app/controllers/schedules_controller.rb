@@ -1,6 +1,6 @@
 class SchedulesController < ApplicationController
   before_action :get_schedule, only: %i(show)
-  
+
   def show
     @tasks = @schedule.tasks
     respond_to do |format|
@@ -17,5 +17,4 @@ class SchedulesController < ApplicationController
   def get_schedule
     @schedule = Schedule.find_by id: params[:id]
   end
-
 end
