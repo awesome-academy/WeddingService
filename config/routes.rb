@@ -9,7 +9,10 @@ Rails.application.routes.draw do
   resources :users
   resources :news, only: %i(index show)
   resources :services
-  resources :schedules, only: %i(index show)
+  resources :schedules, only: %i(index show) do
+    resources :clones, only: %i(show create new)
+  end
+
   resources :tasks, only: %i(edit update destroy)
   resources :vendors
   resources :service_of_vendors

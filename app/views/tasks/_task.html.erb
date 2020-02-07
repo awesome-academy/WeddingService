@@ -4,13 +4,16 @@
 			<div class="col-lg-12">
       <blockquote class="generic-blockquote">
         <p><%= task.describle %></p>
-        <% if can? :update, Task %>
+        <% if (can? :update, Task) || ( user_signed_in? && my_schedule?) %>
         <p><%= render "tasks/form_time", task: task %></p>
         <% else %>
         <p><%= task.time %></p>
         <% end %>
         <% if can? :destroy, Task %>
         <%= link_to t("views.tasks.delete"), task, method: :delete, data: { confirm: t("views.tasks.sure") }%>
+        <% end %>
+        <% if task.serviceOfVendor %>
+          <%= render task.serviceOfVendor %>
         <% end %>
       </blockquote>
       <%= link_to t("views.tasks.vendors"), "", data: {id: task.id}, remote: true %>

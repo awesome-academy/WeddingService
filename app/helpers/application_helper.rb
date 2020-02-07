@@ -10,6 +10,11 @@ module ApplicationHelper
   end
 
   def get_schedules
-    @schedules = Schedule.all
+    @schedules = Schedule.where("privacy = 'professed'")
+  end
+
+  def my_schedule?
+    @schedule = Schedule.find_by id: params[:id]
+    return true if current_user.schedule == @schedule
   end
 end
