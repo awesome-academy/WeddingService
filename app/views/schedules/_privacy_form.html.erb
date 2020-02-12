@@ -1,0 +1,9 @@
+<%= form_for schedule, url: schedule_path(schedule) do |f| %>
+  <div class="field">
+    <%= f.label t("views.schedules.privacy") %> <br />
+    <%= f.select :privacy, [:professed, :draft], :prompt => t("views.schedules.select"), class: "form-control" %>
+  </div>
+  <div class="actions">
+    <%= f.submit t("views.services.submit"), class: "btn btn-primary"%>
+  </div>
+<% end %>

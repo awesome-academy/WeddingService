@@ -9,7 +9,7 @@
         <% else %>
         <p><%= task.time %></p>
         <% end %>
-        <% if can? :destroy, Task %>
+        <% if user_signed_in? && my_schedule?  %>
         <%= link_to t("views.tasks.delete"), task, method: :delete, data: { confirm: t("views.tasks.sure") }%>
         <% end %>
         <% if task.serviceOfVendor %>

@@ -1,6 +1,7 @@
 class VendorsController < ApplicationController
   before_action :get_vendor, only: %i(edit show destroy update)
   load_and_authorize_resource param_method: :vendor_params
+  load_and_authorize_resource find_by: :slug
   def index
     @pagy, @vendors = pagy Vendor.all, items: 4
   end
@@ -48,7 +49,7 @@ class VendorsController < ApplicationController
   end
 
   def get_vendor
-    @vendor =  Vendor.find_by id: params[:id]
+    @vendor =  Vendor.find_by_slug(params[:id]) || Vendor.find_by(id: params[:id])
     return if @vendor
     redirect_to vendors_path
   end

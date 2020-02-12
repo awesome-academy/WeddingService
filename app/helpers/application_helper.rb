@@ -10,7 +10,7 @@ module ApplicationHelper
   end
 
   def get_schedules
-    @schedules = Schedule.where("privacy = 'professed'")
+    @schedules = Schedule.professed
   end
 
   def my_schedule?

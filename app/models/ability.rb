@@ -16,6 +16,7 @@ class Ability
       can :manage, :all
     elsif user.member?
       can :read, :all
+      can [:update, :destroy], Schedule
     end
 
     if user.supplier?

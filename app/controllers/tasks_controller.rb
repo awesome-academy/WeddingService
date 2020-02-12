@@ -14,7 +14,7 @@ class TasksController < ApplicationController
   def update
     if @task.update time_params
       flash[:success] = t "views.tasks.success"
-        redirect_to @task.schedule
+      redirect_to @task.schedule
     else
       flash[:danger] = t "views.tasks.fail"
       redirect_to @task.schedule
