@@ -27,6 +27,7 @@ gem "carrierwave"
 gem "ckeditor", "4.2.0"
 gem "bootstrap-sass"
 gem "amoeba"
+gem "chartkick"
 
 group :development, :test do
   gem "sqlite3"

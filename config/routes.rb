@@ -11,9 +11,16 @@ Rails.application.routes.draw do
   resources :services
   resources :schedules, only: %i(index show) do
     resources :clones, only: %i(show create new)
+    get :charts, on: :member
   end
 
   resources :tasks, only: %i(edit update destroy)
   resources :vendors
   resources :service_of_vendors
+  resources :charts, only: [] do
+    collection do
+      get "schedules_by_privacy"
+      get "schedules_by_created_at"
+    end
+  end
 end

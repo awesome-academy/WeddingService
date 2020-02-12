@@ -105,5 +105,9 @@ en:
       sure: "You sure?"
       success: "Success"
       fail: "Fail"
+    
+    schedules:
+      be_created: "Schedules are created"
+      be_public: "Schedules are public"
   admin:
     check_admin: "You are not authorize to access this page!"
