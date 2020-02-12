@@ -1,4 +1,5 @@
 class Task < ApplicationRecord
+  acts_as_paranoid
   belongs_to :schedule
   belongs_to :service, optional: true
   amoeba do
