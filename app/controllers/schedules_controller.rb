@@ -8,7 +8,7 @@ class SchedulesController < ApplicationController
       format.js{}
     end
   end
-
+  
   def index
     @pagy, @schedules = pagy Schedule.all, items: 4
   end

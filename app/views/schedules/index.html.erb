@@ -15,6 +15,10 @@
 <div class="whole-wrap">
 		<div class="container box_1170">
 			<div class="section-top-border">
+        <%= t "views.schedules.be_created" %><br><br>
+        <%= line_chart schedules_by_created_at_charts_path %>
+        <br><%= t "views.schedules.be_public" %><br>
+        <%= pie_chart schedules_by_privacy_charts_path %>
         <%= render @schedules %>
         <%== pagy_bootstrap_nav(@pagy) %>
 			</div>
