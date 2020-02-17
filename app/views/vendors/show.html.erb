@@ -43,6 +43,7 @@
                 <li> <i class="fa fa-phone"></i>
                 <%= @vendor.phone %></li>
                 <li><i class="fa fa-envelope"></i><%= @vendor.email %></li>
+                <li><%= link_to "send a message", new_personal_message_path(receiver_id: @vendor.user) %></li>
               </ul>
             </div>
             <% if can? [:update, :destroy], @vendor %>

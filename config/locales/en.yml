@@ -39,6 +39,10 @@ en:
       plan: "Plan"
       sign_up: "Sign up"
       vendor: "Vendor"
+      log_out: "Log out"
+      messager: "Messenger"
+      profile: "Profile"
+
   static_pages:
     about:
       about_us: "About us"
@@ -105,5 +109,15 @@ en:
       sure: "You sure?"
       success: "Success"
       fail: "Fail"
+    
+    conversations:
+      body: "body"
+      at: "at"
+      by: "by"
+      new: "New message to"
+      chatting: "Chatting with"
+      your_conversations: "Your conversations"
+      view: "View conversation"
+
   admin:
     check_admin: "You are not authorize to access this page!"
