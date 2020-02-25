@@ -105,5 +105,7 @@ en:
       sure: "You sure?"
       success: "Success"
       fail: "Fail"
+    messages:
+      submit: "Submit"
   admin:
     check_admin: "You are not authorize to access this page!"

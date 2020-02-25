@@ -19,4 +19,5 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require ckeditor/init
+//= require cable
 //= require_tree .
