@@ -16,4 +16,7 @@ Rails.application.routes.draw do
   resources :tasks, only: %i(edit update destroy)
   resources :vendors
   resources :service_of_vendors
+
+  get "/rooms", to: "rooms#show"
+  mount ActionCable.server => "/cable"
 end

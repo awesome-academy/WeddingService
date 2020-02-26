@@ -1,0 +1,13 @@
+<div class="message">
+  <% if message.user %>
+  <a href="" class="message_profile-pic"></a>
+  <a href="" class="message_username"><%= message.user.name %></a>
+  <% end %>
+  <span class="message_timestamp">
+    <%= message.created_at.strftime("%m %d %Y") %>
+  </span>
+  <span class="message_star"></span>
+  <span class="message_content">
+    <%= message.content %>
+  </span>
+</div>

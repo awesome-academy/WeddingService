@@ -6,6 +6,7 @@ class User < ApplicationRecord
   enum role: AUTHORITIES
   validate :check_birthday
   has_many :vendors
+  has_many :messages
   belongs_to :schedule, optional: true
 
   def self.new_with_session params, session
