@@ -8,6 +8,10 @@ class User < ApplicationRecord
   has_many :vendors
   belongs_to :schedule, optional: true
 
+  has_many :authored_conversations, class_name: "Conversation", foreign_key: "author_id"
+  has_many :received_conversations, class_name: "Conversation", foreign_key: "received_id"
+  has_many :personal_messages, dependent: :destroy
+  
   def self.new_with_session params, session
     super.tap do |user|
       if data = session["devise.facebook_data"] &&

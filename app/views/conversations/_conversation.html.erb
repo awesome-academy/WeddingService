@@ -1,0 +1,8 @@
+<div>
+  <%= t "views.conversation.chatting" %> <%= conversation.with(current_user).name %>
+  <br>
+  <em><%= conversation.personal_messages.last.body.truncate(50) %></em>
+  <br>
+  <%= link_to t("views.conversation.view"), conversation_path(conversation) %>
+  <hr>
+</div>

@@ -1,0 +1,24 @@
+<div class="bradcam_area bradcam_bg_2">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12">
+        <div class="bradcam_text text-center">
+          <h3></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h1><%= t "views.conversations.chatting" %> <%= @conversation.with(current_user).name %></h1>
+
+<div id="conversation-main">
+  <div id="conversation-body">
+    <div id="div-create">
+      <%= render @personal_messages %>
+    </div>
+  </div>
+  <div id="ajax-form-create">
+    <%= render "personal_messages/form" %>
+  </div>
+</div>

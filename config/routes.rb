@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  mount Ckeditor::Engine => '/ckeditor'
+  mount Ckeditor::Engine => "/ckeditor"
   devise_for :users, :controllers => { :registrations => "users/registrations", omniauth_callbacks: "users/omniauth_callbacks" }
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  mount RailsAdmin::Engine => "/admin", as: "rails_admin"
 
   root to: "static_pages#index"
   get "/about", to: "static_pages#about"
@@ -16,4 +16,6 @@ Rails.application.routes.draw do
   resources :tasks, only: %i(edit update destroy)
   resources :vendors
   resources :service_of_vendors
+  resources :personal_messages, only: %i(create new)
+  resources :conversations, only: %i(index show)
 end

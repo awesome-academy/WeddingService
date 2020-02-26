@@ -1,0 +1,8 @@
+<h1><%= t "views.conversations.new" %> <%= @receiver.name %></h1>
+
+<%= form_for @personal_message do |f| %>
+  <%= hidden_field_tag "receiver_id", @receiver.id %>
+  <%= f.label t("views.conversations.new") %>
+  <%= f.text_area :body %>
+  <%= f.submit %>
+<% end %>
